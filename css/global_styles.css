@@ -10,19 +10,34 @@
 }
 
 :root {
+    --White: #FFFFFF;
     --Pink: #E03166;
     --DarkBlue: #7C8DB5;
     --LightBlue: #E6EFFF;
+    --LightestGreen: #D8F5E8;
+
+    --Header: 100;
 }
 
 .header{
     font-size: 25px;
     height: 90px;
+    width: 100%;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px;
     border-bottom: 2px solid var(--LightBlue);
+    background-color: var(--White);
+    position: fixed;
+    z-index: var(--Header);
+}
+
+.logo{
+    height: 50px;
+    width: 50px;
 }
 
 .user {
@@ -38,5 +53,92 @@
 
 .container{
     width: 90%;
+    height: fit-content;
     margin: 0 auto;
+}
+
+.first-coach-block{
+    height: 620px;
+    margin-top: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.child-coach-block{
+    width: 40%;
+    margin: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+button{
+    width: 100px;
+    height: 25px;
+    margin: 5px;
+    background-color: var(--White) ;
+    color: var(--DarkBlue);
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 15px;
+    border: 2px solid var(--LightBlue);
+}
+
+.drop-down-bar{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+}
+
+.table-block{
+    width: 100%;
+    background-color: #E03166;
+    height: 450px;
+}
+
+@media (min-width: 768px) and (max-width: 1200px),(max-width: 12cm){
+    .child-coach-block {
+        width: 75%;
+        margin: 10px;
+    }
+
+    .first-coach-block {
+        margin-top: 100px;
+    }
+
+    .table-block {
+        height: 400px;
+    }
+    .first-coach-block{
+        height: 1200px;
+    }
+}
+
+@media (max-width: 767px) {
+    .child-coach-block {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    .first-coach-block {
+        margin-top: 90px;
+    }
+
+    .table-block {
+        height: 300px;
+    }
+    .first-coach-block{
+        height: 1000px;
+    }
 }
