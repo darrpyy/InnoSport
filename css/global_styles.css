@@ -80,7 +80,7 @@ h1{
     font-weight: bold;
 }
 
-button{
+button, input{
     width: 100px;
     height: 25px;
     margin: 5px;
@@ -141,4 +141,39 @@ button{
     .first-coach-block{
         height: 1000px;
     }
+}
+
+.drop-down-student-progress {
+    margin-top: 30px;
+    height: 90px;
+    width: 100%;
+    background-color: var(--LightBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    border: 2px solid var(--DarkBlue);
+    text-align: center;
+    height: 35px;
+    width: 40%;
+}
+
+.drop-down-tops{
+    height: 90px;
+    width: 100%;
+    background-color: var(--LightBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid var(--White);
+}
+
+.leaders-top{
+    color: var(--DarkBlue);
+    font-size: 30px;
+    text-align: center;
+    height: 35px;
+    width: 30%;
 }
