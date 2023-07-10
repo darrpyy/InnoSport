@@ -123,6 +123,12 @@ button, input{
     .first-coach-block{
         height: 1200px;
     }
+    .button{
+        width: 150px;
+        height:75px;
+        margin: 10px;
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -140,6 +146,12 @@ button, input{
     }
     .first-coach-block{
         height: 1000px;
+    }
+    .button{
+        width: 150px;
+        height:75px;
+        margin: 10px;
+        font-size: 20px;
     }
 }
 
@@ -175,5 +187,10 @@ input {
     font-size: 30px;
     text-align: center;
     height: 35px;
-    width: 30%;
+    width: 40%;
+}
+
+.vis{
+    height: inherit;
+    width: 100%;
 }
