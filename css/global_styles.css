@@ -83,7 +83,7 @@ h1{
 button, input{
     width: 100px;
     height: 25px;
-    margin: 5px;
+    margin: 10px;
     background-color: var(--White) ;
     color: var(--DarkBlue);
     font-size: 15px;
@@ -96,63 +96,16 @@ button, input{
     width: 90%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     justify-items: center;
     align-items: center;
+    row-gap: 20px;
 }
 
 .table-block{
     width: 100%;
     background-color: #E03166;
     height: 450px;
-}
-
-@media (min-width: 768px) and (max-width: 1200px),(max-width: 12cm){
-    .child-coach-block {
-        width: 75%;
-        margin: 10px;
-    }
-
-    .first-coach-block {
-        margin-top: 100px;
-    }
-
-    .table-block {
-        height: 400px;
-    }
-    .first-coach-block{
-        height: 1200px;
-    }
-    .button{
-        width: 150px;
-        height:75px;
-        margin: 10px;
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 767px) {
-    .child-coach-block {
-        width: 80%;
-        margin: 10px 0;
-    }
-
-    .first-coach-block {
-        margin-top: 90px;
-    }
-
-    .table-block {
-        height: 300px;
-    }
-    .first-coach-block{
-        height: 1000px;
-    }
-    .button{
-        width: 150px;
-        height:75px;
-        margin: 10px;
-        font-size: 20px;
-    }
 }
 
 .drop-down-student-progress {
@@ -172,11 +125,12 @@ input {
     width: 40%;
 }
 
-.drop-down-tops{
+.tops-header{
     height: 90px;
     width: 100%;
     background-color: var(--LightBlue);
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     border-top: 2px solid var(--White);
@@ -187,10 +141,24 @@ input {
     font-size: 30px;
     text-align: center;
     height: 35px;
-    width: 40%;
+    margin: 0 30px;
 }
 
-.vis{
-    height: inherit;
+.tops-block{
+    height: 640px;
+    margin: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.top-text{
+    font-size: 30px;
+}
+
+.top-container{
+    background-color: #E03166;
+    height: 520px;
     width: 100%;
 }
+
