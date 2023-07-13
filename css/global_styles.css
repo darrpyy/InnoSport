@@ -26,6 +26,7 @@
     top: 0;
     left: 0;
     display: flex;
+    margin-bottom: 30px;
     justify-content: space-between;
     align-items: center;
     padding: 30px;
@@ -58,7 +59,7 @@
 }
 
 .first-coach-block{
-    height: 620px;
+    height: 550px;
     margin-top: 120px;
     display: flex;
     flex-wrap: wrap;
@@ -104,8 +105,10 @@ button, input{
 
 .table-block{
     width: 100%;
-    background-color: #E03166;
-    height: 450px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .drop-down-student-progress {
