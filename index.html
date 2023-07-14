@@ -46,44 +46,47 @@
             <h1>Attendance</h1>
 
             <div class="drop-down-bar">
-                <button>Disciplines
-                    <ul>
-                        <li>discipline 1</li>
-                        <li>discipline 2</li>
-                        <li>discipline 3</li>
-                    </ul>
-                </button>
-                <button>Period
-                    <ul>
-                        <li>Fall</li>
-                        <li>Spring</li>
-                        <li>Summer</li>
-                    </ul>
-                </button>
-                <button>Course
-                    <ul>
-                        <li>Bachelors
-                            <ul>
-                                <li>23</li>
-                                <li>22</li>
-                                <li>21</li>
-                                <li>20</li>
-                            </ul>
-                        </li>
-                        <li>Magistes
-                            <ul>
-                                <li>22</li>
-                                <li>21</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </button>
-                <button>Group
-                    <ul>
-                        <li>General</li>
-                        <li>Special</li>
 
+
+                <button>Disciplines
+                    <div class="drop-down-content">
+                    <ul id="disciplinesList" class="drop-down-list">
+                        <li class="drop-down-item">discipline 1</li>
+                        <li class="drop-down-item">discipline 2</li>
+                        <li class="drop-down-item">discipline 3</li>
+                        <li class="drop-down-item">discipline 4</li>
+                        <li class="drop-down-item">discipline 5</li>
                     </ul>
+                    </div>
+                </button>
+
+                <button> Period
+                    <div class="drop-down-content">
+                        <ul class="drop-down-list">
+                            <li class="drop-down-item">Week</li>
+                            <li class="drop-down-item">Month</li>
+                        </ul>
+                    </div>
+                </button>
+
+                <button>Course
+                    <div class="drop-down-content">
+                    <ul class="drop-down-list">
+                        <li class="drop-down-item">BS21</li>
+                        <li class="drop-down-item">BS22</li>
+                        <li class="drop-down-item">MS21</li>
+                        <li class="drop-down-item">MS20</li>
+                    </ul>
+                    </div>
+                </button>
+
+                <button> Group
+                    <div class="drop-down-content">
+                        <ul class="drop-down-list">
+                            <li class="drop-down-item">Special</li>
+                            <li class="drop-down-item">General</li>
+                        </ul>
+                    </div>
                 </button>
             </div>
 
@@ -162,6 +165,7 @@
 </div>
 <script type="module" src="attendance.js"></script>
 <script type="module" src="frequency.js"></script>
+<script type="module" src="dataForDropDowns/disciplines.js"></script>
 
 </body>
 </html>

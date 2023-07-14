@@ -17,11 +17,12 @@
     --LightestGreen: #D8F5E8;
 
     --Header: 100;
+    --DropDown: 50;
 }
 
 .header{
     font-size: 25px;
-    height: 90px;
+    height: 12vh;
     width: 100%;
     top: 0;
     left: 0;
@@ -59,15 +60,15 @@
 }
 
 .first-coach-block{
-    height: 550px;
-    margin-top: 120px;
+    height: 82vh;
+    margin-top: 15vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .child-coach-block{
-    width: 45%;
+    width: 40%;
     margin: 10px 30px;
     display: flex;
     flex-direction: column;
@@ -93,6 +94,11 @@ button, input{
     border: 2px solid var(--LightBlue);
 }
 
+button:hover{
+    background-color: var(--LightBlue);
+    color: var(--DarkBlue);
+}
+
 .drop-down-bar{
     width: 90%;
     display: flex;
@@ -103,44 +109,32 @@ button, input{
     row-gap: 20px;
 }
 
-.drop-down-bar button ul {
+.drop-down-content{
+    margin-top: 2px;
+    display: block;
+    z-index: var(--DropDown);
+    height: 12vh;
+    overflow: auto;
+}
+
+.drop-down-list{
     position: relative;
-    width: 100px;
     display: none;
+    overflow: auto;
+    z-index: var(--DropDown);
 }
 
-.drop-down-bar button ul li {
+.drop-down-item{
     position: relative;
-    width: 100px;
-    background-color: var(--White);
-    color: var(--DarkBlue);
-    font-size: 15px;
-    border-radius: 20px;
-    border: 2px solid var(--LightBlue);
+    margin: 5px 0;
 }
 
-.drop-down-bar button:hover > ul {
+.drop-down-item:hover{
+    color: var(--Pink);
+}
+
+button:hover .drop-down-list{
     display: initial;
-}
-
-.drop-down-bar button ul li ul {
-    position: relative;
-    width: 100px;
-    display: none;
-}
-
-.drop-down-bar button ul li ul li {
-    position: relative;
-    width: 100px;
-    background-color: var(--White);
-    color: var(--DarkBlue);
-    font-size: 15px;
-    border-radius: 15px;
-    border: 2px solid var(--LightBlue);
-}
-
-.drop-down-bar button ul li:hover > ul {
-    display: flex;
 }
 
 #studentList {
