@@ -121,6 +121,73 @@ button, input{
     align-items: center;
 }
 
+.drop-down-bar {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.drop-down-bar button ul {
+    position: relative;
+    width: 100px;
+    display: none;
+}
+
+.drop-down-bar button ul li {
+    position: relative;
+    width: 100px;
+    background-color: var(--White);
+    color: var(--DarkBlue);
+    font-size: 15px;
+    border-radius: 20px;
+    border: 2px solid var(--LightBlue);
+}
+
+.drop-down-bar button:hover > ul {
+    display: initial;
+}
+
+.drop-down-bar button ul li ul {
+    position: relative;
+    width: 100px;
+    display: none;
+}
+
+.drop-down-bar button ul li ul li {
+    position: relative;
+    width: 100px;
+    background-color: var(--White);
+    color: var(--DarkBlue);
+    font-size: 15px;
+    border-radius: 15px;
+    border: 2px solid var(--LightBlue);
+}
+
+.drop-down-bar button ul li:hover > ul {
+    display: initial;
+}
+
+#studentList {
+    display: none;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: var(--LightBlue);
+}
+
+#studentList li {
+    padding: 5px;
+    cursor: pointer;
+}
+
+#studentList li:hover {
+    background-color: #f4f4f4;
+    display: initial;
+}
+
 input {
     border: 2px solid var(--DarkBlue);
     text-align: center;
