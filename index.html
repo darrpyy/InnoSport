@@ -31,10 +31,26 @@
             <h1>Frequency of visiting classes</h1>
 
             <div class="drop-down-bar">
-                <button>Disciplines</button>
-                <button>Period</button>
-                <button>Course</button>
-                <button>Group</button>
+                <button>Disciplines
+                    <div class="drop-down-content">
+                        <ul id="disciplinesListFOVS" class="drop-down-list"></ul>
+                    </div>
+                </button>
+                <button>Period
+                    <div class="drop-down-content">
+                        <ul id="periodListFOVS" class="drop-down-list"></ul>
+                    </div>
+                </button>
+                <button>Course
+                    <div class="drop-down-content">
+                        <ul id="courseListFOVS" class="drop-down-list"></ul>
+                    </div>
+                </button>
+                <button>Group
+                    <div class="drop-down-content">
+                        <ul id="groupListFOVS" class="drop-down-list"></ul>
+                    </div>
+                </button>
             </div>
 
             <div class="table-block">
@@ -50,42 +66,25 @@
 
                 <button>Disciplines
                     <div class="drop-down-content">
-                    <ul id="disciplinesList" class="drop-down-list">
-                        <li class="drop-down-item">discipline 1</li>
-                        <li class="drop-down-item">discipline 2</li>
-                        <li class="drop-down-item">discipline 3</li>
-                        <li class="drop-down-item">discipline 4</li>
-                        <li class="drop-down-item">discipline 5</li>
-                    </ul>
+                        <ul id="disciplinesListAttendance" class="drop-down-list"></ul>
                     </div>
                 </button>
 
                 <button> Period
                     <div class="drop-down-content">
-                        <ul class="drop-down-list">
-                            <li class="drop-down-item">Week</li>
-                            <li class="drop-down-item">Month</li>
-                        </ul>
+                        <ul id="periodListAttendance" class="drop-down-list"></ul>
                     </div>
                 </button>
 
                 <button>Course
                     <div class="drop-down-content">
-                    <ul class="drop-down-list">
-                        <li class="drop-down-item">BS21</li>
-                        <li class="drop-down-item">BS22</li>
-                        <li class="drop-down-item">MS21</li>
-                        <li class="drop-down-item">MS20</li>
-                    </ul>
+                        <ul id="courseListAttendance" class="drop-down-list"></ul>
                     </div>
                 </button>
 
                 <button> Group
                     <div class="drop-down-content">
-                        <ul class="drop-down-list">
-                            <li class="drop-down-item">Special</li>
-                            <li class="drop-down-item">General</li>
-                        </ul>
+                        <ul id="groupListAttendance" class="drop-down-list"></ul>
                     </div>
                 </button>
             </div>
@@ -138,7 +137,11 @@
             <h1 class="top-text">Sport Hours Top</h1>
 
             <div class="drop-down-bar">
-                <button>Course</button>
+                <button>Course
+                    <div class="drop-down-content">
+                        <ul id="courseListSportHours" class="drop-down-list"></ul>
+                    </div>
+                </button>
             </div>
 
             <div class="top-container">
@@ -150,8 +153,16 @@
             <h1 class="top-text">FitTest Top</h1>
 
             <div class="drop-down-bar">
-                <button>Exercise</button>
-                <button>Course</button>
+                <button>Exercise
+                    <div class="drop-down-content">
+                        <ul id="exerciseListFittest" class="drop-down-list"></ul>
+                    </div>
+                </button>
+                <button>Course
+                    <div class="drop-down-content">
+                        <ul id="courseListFittest" class="drop-down-list"></ul>
+                    </div>
+                </button>
             </div>
 
             <div class="top-container">
@@ -166,7 +177,10 @@
 <script type="module" src="attendance.js"></script>
 <script type="module" src="frequency.js"></script>
 <script type="module" src="dataForDropDowns/disciplines.js"></script>
-
+<script type="module" src="dataForDropDowns/group.js"></script>
+<script type="module" src="dataForDropDowns/period.js"></script>
+<script type="module" src="dataForDropDowns/course.js"></script>
+<script type="module" src="dataForDropDowns/exercise.js"></script>
 </body>
 </html>
 
