@@ -1,9 +1,10 @@
 const ctx = document.getElementById('frequencyChart');
 
 //Prepare data
-var subjects = ['Healthy Back', 'Functional', 'Crossfit', 'RAGE', 'Rage Knights', 'Street dance'];
-var students = [40, 20, 35, 50, 30, 40];
-var maxStudents = [80, 70, 80, 60, 80, 50];
+var subjects = ['Healthy Back', 'Functional', 'Crossfit', 'Rage', 'Rage Knights',
+    'Street dance','Social dance', 'Swimming beginners', 'Swimming advanced','Football','Basketball'];
+var students = [40, 20, 35, 50, 30, 40, 40, 30, 10, 60, 40];
+var maxStudents = [80, 70, 80, 60, 80, 50, 70, 60, 30, 80, 60];
 
 //Create chart
 new Chart(ctx, {
@@ -17,8 +18,8 @@ new Chart(ctx, {
             borderWidth: 1,
             borderRadius: 20,
             backgroundColor: '#008141',
-            barPercentage: 0.4,
-            categoryPercentage: 0.8
+            barPercentage: 1,
+            categoryPercentage: 0.5
         },
             {
                 label: 'Maximum Number of Students',
@@ -26,8 +27,8 @@ new Chart(ctx, {
                 borderRadius: 20,
                 backgroundColor: '#D8F5E8',
                 borderWidth: 0,
-                barPercentage: 0.4,
-                categoryPercentage: 0.8
+                barPercentage: 1,
+                categoryPercentage: 0.5
             }
         ]
     },
