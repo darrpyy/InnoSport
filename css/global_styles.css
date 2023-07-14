@@ -168,7 +168,7 @@ button, input{
 }
 
 .drop-down-bar button ul li:hover > ul {
-    display: initial;
+    display: flex;
 }
 
 #studentList {
@@ -185,7 +185,7 @@ button, input{
 
 #studentList li:hover {
     background-color: #f4f4f4;
-    display: initial;
+    display: flex;
 }
 
 input {
