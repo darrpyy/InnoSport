@@ -46,10 +46,45 @@
             <h1>Attendance</h1>
 
             <div class="drop-down-bar">
-                <button>Disciplines</button>
-                <button>Period</button>
-                <button>Course</button>
-                <button>Group</button>
+                <button>Disciplines
+                    <ul>
+                        <li>discipline 1</li>
+                        <li>discipline 2</li>
+                        <li>discipline 3</li>
+                    </ul>
+                </button>
+                <button>Period
+                    <ul>
+                        <li>Fall</li>
+                        <li>Spring</li>
+                        <li>Summer</li>
+                    </ul>
+                </button>
+                <button>Course
+                    <ul>
+                        <li>Bachelors
+                            <ul>
+                                <li>23</li>
+                                <li>22</li>
+                                <li>21</li>
+                                <li>20</li>
+                            </ul>
+                        </li>
+                        <li>Magistes
+                            <ul>
+                                <li>22</li>
+                                <li>21</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </button>
+                <button>Group
+                    <ul>
+                        <li>General</li>
+                        <li>Special</li>
+
+                    </ul>
+                </button>
             </div>
 
             <div class="table-block">
@@ -63,6 +98,29 @@
 </div>
 <div class="drop-down-student-progress">
     <label for="name"></label><input type="text" id="name" placeholder="Enter student email">
+    <ul id="studentList">
+        <li>student1@example.com</li>
+        <li>student2@example.com</li>
+        <li>student3@example.com</li>
+        <li>student4@example.com</li>
+    </ul>
+    <script>
+        document.getElementById('name').addEventListener('click', function () {
+            let studentList = document.getElementById('studentList');
+            if (studentList.style.display === 'none') {
+                studentList.style.display = 'block';
+            } else {
+                studentList.style.display = 'none';
+            }
+        });
+
+        document.querySelectorAll('#studentList li').forEach(function (student) {
+            student.addEventListener('click', function () {
+                document.getElementById('name').value = this.innerHTML;
+                document.getElementById('studentList').style.display = 'none';
+            });
+        });
+    </script>
 </div>
 
 
@@ -72,34 +130,34 @@
 
 <div class="container">
 
-<div class="tops-block">
-    <div class="child-coach-block">
-        <h1 class="top-text">Sport Hours Top</h1>
+    <div class="tops-block">
+        <div class="child-coach-block">
+            <h1 class="top-text">Sport Hours Top</h1>
 
-        <div class="drop-down-bar">
-            <button>Course</button>
+            <div class="drop-down-bar">
+                <button>Course</button>
+            </div>
+
+            <div class="top-container">
+
+            </div>
+
         </div>
+        <div class="child-coach-block">
+            <h1 class="top-text">FitTest Top</h1>
 
-        <div class="top-container">
+            <div class="drop-down-bar">
+                <button>Exercise</button>
+                <button>Course</button>
+            </div>
+
+            <div class="top-container">
+
+
+            </div>
 
         </div>
-
     </div>
-    <div class="child-coach-block">
-        <h1 class="top-text">FitTest Top</h1>
-
-        <div class="drop-down-bar">
-            <button>Exercise</button>
-            <button>Course</button>
-        </div>
-
-        <div class="top-container">
-
-
-        </div>
-
-    </div>
-</div>
 
 </div>
 <script type="module" src="attendance.js"></script>

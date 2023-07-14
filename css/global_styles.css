@@ -103,6 +103,63 @@ button, input{
     row-gap: 20px;
 }
 
+.drop-down-bar button ul {
+    position: relative;
+    width: 100px;
+    display: none;
+}
+
+.drop-down-bar button ul li {
+    position: relative;
+    width: 100px;
+    background-color: var(--White);
+    color: var(--DarkBlue);
+    font-size: 15px;
+    border-radius: 20px;
+    border: 2px solid var(--LightBlue);
+}
+
+.drop-down-bar button:hover > ul {
+    display: initial;
+}
+
+.drop-down-bar button ul li ul {
+    position: relative;
+    width: 100px;
+    display: none;
+}
+
+.drop-down-bar button ul li ul li {
+    position: relative;
+    width: 100px;
+    background-color: var(--White);
+    color: var(--DarkBlue);
+    font-size: 15px;
+    border-radius: 15px;
+    border: 2px solid var(--LightBlue);
+}
+
+.drop-down-bar button ul li:hover > ul {
+    display: flex;
+}
+
+#studentList {
+    display: none;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: var(--LightBlue);
+}
+
+#studentList li {
+    padding: 5px;
+    cursor: pointer;
+}
+
+#studentList li:hover {
+    background-color: #f4f4f4;
+    display: flex;
+}
+
 .table-block{
     width: 100%;
     height: 350px;
