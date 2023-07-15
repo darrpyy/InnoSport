@@ -20,7 +20,7 @@
     --DropDown: 50;
 }
 
-.header{
+.header {
     font-size: 25px;
     height: 12vh;
     width: 100%;
@@ -37,7 +37,7 @@
     z-index: var(--Header);
 }
 
-.logo{
+.logo {
     height: 50px;
     width: 50px;
 }
@@ -48,18 +48,18 @@
     font-weight: 500;
 }
 
-.log-out{
+.log-out {
     margin-left: 30px;
     color: var(--Pink);
 }
 
-.container{
+.container {
     width: 95%;
     height: fit-content;
     margin: 0 auto;
 }
 
-.first-coach-block{
+.first-coach-block {
     height: 82vh;
     margin-top: 15vh;
     display: flex;
@@ -67,7 +67,7 @@
     justify-content: center;
 }
 
-.child-coach-block{
+.child-coach-block {
     width: 40%;
     margin: 10px 30px;
     display: flex;
@@ -77,16 +77,16 @@
     align-items: center;
 }
 
-h1{
+h1 {
     font-size: 35px;
     font-weight: bold;
 }
 
-button, input{
+button, input {
     width: 100px;
     height: 25px;
     margin: 10px;
-    background-color: var(--White) ;
+    background-color: var(--White);
     color: var(--DarkBlue);
     font-size: 15px;
     font-weight: 500;
@@ -94,12 +94,12 @@ button, input{
     border: 2px solid var(--LightBlue);
 }
 
-button:hover{
+button:hover {
     background-color: var(--LightBlue);
     color: var(--DarkBlue);
 }
 
-.drop-down-bar{
+.drop-down-bar {
     width: 90%;
     display: flex;
     flex-wrap: wrap;
@@ -109,7 +109,7 @@ button:hover{
     row-gap: 20px;
 }
 
-.drop-down-content{
+.drop-down-content {
     margin-top: 2px;
     display: block;
     z-index: var(--DropDown);
@@ -117,23 +117,23 @@ button:hover{
     overflow: auto;
 }
 
-.drop-down-list{
+.drop-down-list {
     position: relative;
     display: none;
     overflow: auto;
     z-index: var(--DropDown);
 }
 
-.drop-down-item{
+.drop-down-item {
     position: relative;
     margin: 5px 0;
 }
 
-.drop-down-item:hover{
+.drop-down-item:hover {
     color: var(--Pink);
 }
 
-button:hover .drop-down-list{
+button:hover .drop-down-list {
     display: initial;
 }
 
@@ -154,7 +154,7 @@ button:hover .drop-down-list{
     display: flex;
 }
 
-.table-block{
+.table-block {
     width: 100%;
     height: 350px;
     display: flex;
@@ -179,7 +179,7 @@ input {
     width: 40%;
 }
 
-.tops-header{
+.tops-header {
     height: 90px;
     width: 100%;
     background-color: var(--LightBlue);
@@ -190,7 +190,7 @@ input {
     border-top: 2px solid var(--White);
 }
 
-.leaders-top{
+.leaders-top {
     color: var(--DarkBlue);
     font-size: 30px;
     text-align: center;
@@ -198,7 +198,7 @@ input {
     margin: 0 30px;
 }
 
-.tops-block{
+.tops-block {
     height: 640px;
     margin: 40px 0;
     display: flex;
@@ -206,13 +206,44 @@ input {
     justify-content: center;
 }
 
-.top-text{
+.top-text {
     font-size: 30px;
 }
 
-.top-container{
-    background-color: #E03166;
+.top-container {
+    /*background-color: #E03166;*/
     height: 520px;
     width: 100%;
+    border-radius: 15px;
+    border: 2px solid var(--LightBlue);
+
+}
+
+.top-line {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.position {
+    margin-right: 10px;
+    background-color: var(--White);
+    color: var(--DarkBlue);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.name {
+    margin-right: 10px;
+}
+
+.hours {
+    border-radius: 4px;
+    background-color: var(--LightestGreen);
+    color: var(--DarkBlue);
+    border: 2px solid var(--LightBlue);
+    padding: 2px;
+    margin-right: 10px;
 }
 
