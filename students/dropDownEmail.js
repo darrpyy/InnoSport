@@ -1,9 +1,10 @@
 var studentEmails = [
     "e.valikov@innopolis.university",
     "a.katin@innopolis.university",
+    "a.katin@innopolis.university",
+    "e.valikov@innopolis.university",
+    "a.katin@innopolis.university",
     "a.katin@innopolis.university"
-
-
 ];
 
 var input = document.getElementById("name");

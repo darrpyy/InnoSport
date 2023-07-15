@@ -4,11 +4,13 @@ function fetchDisciplines() {
         .then(response => response.json())
         .then(data => data);
 }
-var disciplines_data = await fetchDisciplines();
+var disciplines_array = await fetchDisciplines();
 
 //Create array with disciplines(id, name, special)
-disciplines_data = disciplines_data["sports"];
-var disciplines_array = disciplines_data;
+disciplines_array = disciplines_array["sports"];
+
+//Export disciplines
+export default disciplines_array;
 
 //Get HTML elements
 var dropdown_disciplines = document.getElementById('disciplinesList');

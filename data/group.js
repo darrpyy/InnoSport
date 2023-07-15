@@ -4,11 +4,13 @@ function fetchGroups() {
         .then(response => response.json())
         .then(data => data);
 }
-var groups_data = await fetchDisciplines();
+var group_array = await fetchGroups();
 
 //Create array with groups(id, name, description)
-group_data = group_data["medical_groups"];
-var group_array = group_data;
+group_array = group_array["medical_groups"];
+
+//Export disciplines
+export default group_array;
 
 //Get HTML elements
 var dropdown_group = document.getElementById('groupList');

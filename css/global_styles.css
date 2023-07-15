@@ -182,7 +182,7 @@ button:hover{
 
 .drop-down-student-progress {
     margin-top: 30px;
-    height: 15vh;
+    height: fit-content;
     width: 100%;
     background-color: var(--LightBlue);
     flex-direction: column;
@@ -192,6 +192,7 @@ button:hover{
 }
 
 input {
+    margin: 3vh;
     border: 2px solid var(--DarkBlue);
     text-align: center;
     height: 35px;
