@@ -1,13 +1,15 @@
+
 const ctx = document.getElementById('attendanceChart').getContext('2d');
 
+function fetchAttendanceData(subject, start_date, end_date, time_unit) {
+    return fetch('http://127.0.0.1:8000/attendance/' + subject + '?start_date=' + start_date + '&end_date=' + end_date +'&time_unit=' + time_unit)
+        .then(response => response.json())
+        .then(data => data);
+}
+
 // Prepare the data
-var data = [
-    { date: '2023-01-01', students: 40 },
-    { date: '2023-02-01', students: 25 },
-    { date: '2023-03-01', students: 0 },
-    { date: '2023-04-01', students: 50 },
-    { date: '2023-05-01', students: 30 }
-];
+
+var data = await fetchAttendanceData('Math', '2021-01-01', '2021-12-31', 'month');
 
 // Convert date strings to actual Date objects
 var parsedData = data.map(item => ({
@@ -15,8 +17,18 @@ var parsedData = data.map(item => ({
     y: item.students
 }));
 
+async function getParsedData(subject, start_date, end_date, time_unit) {
+    var data = await fetchAttendanceData(subject, start_date, end_date, time_unit);
+    var parsedData = data.map(item => ({
+        x: new Date(item.date),
+        y: item.students
+    }));
+    return parsedData;
+}
+
+
 // Create a line chart
-new Chart(ctx, {
+const attendance_chart = new Chart(ctx, {
     type: 'line',
     data: {
         datasets: [{
@@ -54,3 +66,7 @@ new Chart(ctx, {
         }
     }
 });
+
+
+export {attendance_chart, getParsedData};
+export default attendance_chart;

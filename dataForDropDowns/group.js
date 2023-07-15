@@ -1,7 +1,9 @@
-var data = ['General', 'Special'];
+//Prepare data
+var data = ['All', 'General', 'Special', 'Preparative'];
 
-var dropdown_attendance_group = document.getElementById('groupListAttendance');
-var dropdown_FOVS_group = document.getElementById('groupListFOVS');
+var dropdown_group = document.getElementById('groupList');
+var group_button = document.getElementById('groupButton');
+var drop_down_content_group = document.getElementById('dropDownContentGroup');
 
 
 // Generate options
@@ -9,12 +11,21 @@ for (var i = 0; i < data.length; i++) {
     var option = document.createElement('li');
     option.textContent = data[i];
     option.classList.add("drop-down-item");
-    dropdown_attendance_group.appendChild(option);
+    dropdown_group.appendChild(option);
+    option.addEventListener('click', async function () {
+        group_button.textContent = this.textContent;
+        drop_down_content_group.classList.toggle('show');
+});
 }
 
-for (var i = 0; i < data.length; i++) {
-    var option = document.createElement('li');
-    option.textContent = data[i];
-    option.classList.add("drop-down-item");
-    dropdown_FOVS_group.appendChild(option);
-}
+// Show/hide dropdown content
+group_button.addEventListener('click', function () {
+    drop_down_content_group.classList.toggle('show');
+});
+
+// Close dropdown content when clicking outside
+document.addEventListener('click', function (event) {
+    if (!group_button.contains(event.target) && !drop_down_content_group.contains(event.target)) {
+        drop_down_content_group.classList.remove('show');
+    }
+});
