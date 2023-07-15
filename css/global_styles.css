@@ -139,6 +139,7 @@ button:hover{
     background-color: var(--White);
     display: block;
     border: 2px solid var(--LightBlue);
+    border-radius: 15px;
     padding: 5px;
 
 }
@@ -181,7 +182,7 @@ button:hover{
 
 .drop-down-student-progress {
     margin-top: 30px;
-    height: 90px;
+    height: 12vh;
     width: 100%;
     background-color: var(--LightBlue);
     display: flex;
