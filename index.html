@@ -34,14 +34,14 @@
             <div class="drop-down-bar">
 
                 <div class="drop-down-flexbox">
-                <button id="disciplinesButton">Disciplines</button>
+                    <button id="disciplinesButton">Disciplines</button>
                     <div class="drop-down-content" id="dropDownContentDisciplines">
                         <ul class="drop-down-list" id="disciplinesList"></ul>
                     </div>
                 </div>
 
                 <div class="drop-down-flexbox">
-                <button id="groupButton"> Group </button>
+                    <button id="groupButton"> Group</button>
                     <div class="drop-down-content" id="dropDownContentGroup">
                         <ul class="drop-down-list" id="groupList"></ul>
                     </div>
@@ -58,39 +58,17 @@
 
 </div>
 <div class="drop-down-student-progress">
-
     <label for="name"></label><input type="text" id="name" placeholder="Enter student email">
-
-    <ul id="studentList">
-        <li>student1@example.com</li>
-        <li>student2@example.com</li>
-        <li>student3@example.com</li>
-        <li>student4@example.com</li>
-    </ul>
-    <script>
-        document.getElementById('name').addEventListener('click', function () {
-            let studentList = document.getElementById('studentList');
-            if (studentList.style.display === 'none') {
-                studentList.style.display = 'block';
-            } else {
-                studentList.style.display = 'none';
-            }
-        });
-
-        document.querySelectorAll('#studentList li').forEach(function (student) {
-            student.addEventListener('click', function () {
-                document.getElementById('name').value = this.innerHTML;
-                document.getElementById('studentList').style.display = 'none';
-            });
-        });
-    </script>
+    <div class="drop-down-content" id="dropDownContentEmails">
+        <ul class="drop-down-list" id="emailsList"></ul>
+    </div>
 </div>
 
 <script type="module" src="charts/attendance.js"></script>
 <script type="module" src="charts/frequency.js"></script>
 <script type="module" src="data/disciplines.js"></script>
 <script type="module" src="data/group.js"></script>
-
+<script type="module" src="students/dropDownEmail.js"></script>
 </body>
 </html>
 
