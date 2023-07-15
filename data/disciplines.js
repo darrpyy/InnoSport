@@ -1,21 +1,21 @@
 //Fetch data
-function fetchDisciplines(subject, start_date, end_date, time_unit) {
+function fetchDisciplines() {
     return fetch('https://sport.innopolis.university/api/sports')
         .then(response => response.json())
         .then(data => data);
 }
-
-var data = await fetchDisciplines();
-data = data["sports"];
+var disciplines_data = await fetchDisciplines();
 
 //Create array with disciplines(id, name, special)
-var disciplines_array = data;
+disciplines_data = disciplines_data["sports"];
+var disciplines_array = disciplines_data;
 
+//Get HTML elements
 var dropdown_disciplines = document.getElementById('disciplinesList');
 var disciplines_button = document.getElementById('disciplinesButton');
 var drop_down_content_disciplines = document.getElementById('dropDownContentDisciplines');
 
-// Generate options for attendance dropdown
+// Generate options for disciplines dropdown
 for (var i = 0; i < disciplines_array.length; i++) {
     var option = document.createElement('li');
     option.textContent = disciplines_array[i].name;
