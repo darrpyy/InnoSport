@@ -70,14 +70,58 @@
     </div>
 </div>
 
-<div class="student-progress-block"></div>
+<div class="student-progress-block">
+
+    <div class="student-info">
+
+        <h2>Student Info</h2>
+
+        <span class="username" id="studentName">Name: </span>
+        <span class="username" id="studentGroup">Group: </span>
+        <span class="username" id="studentYear">Year: </span>
+
+    </div>
+
+    <div class="child-student-block">
+        <h1>Sport Hours Progress</h1>
+
+        <div class="drop-down-bar">
+
+            <div class="drop-down-flexbox">
+                <button id="sportHoursButton">Course</button>
+                <div class="drop-down-content" id="dropDownContentSportHours">
+                    <ul class="drop-down-list" id="sportHoursList">
+                        <li class="drop-down-item">All</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="table-block">
+            <canvas id="sportHoursChart"></canvas>
+        </div>
+
+
+    </div>
+
+    <div class="child-student-block">
+        <h1>Fittest Progress</h1>
+
+        <div class="table-block">
+            <canvas id="fittestChart"></canvas>
+        </div>
+
+
+    </div>
+</div>
 
 <script type="module" src="charts/attendance.js"></script>
-<script type="module" src="charts/frequency.js"></script>
+<script type="module" src="charts/fittest.js"></script>
 <script type="module" src="data/disciplines.js"></script>
 <script type="module" src="data/group.js"></script>
 <script type="module" src="students/dropDownEmail.js"></script>
-
+<script type="module" src="students/sportHoursProgress.js"></script>
 </body>
 </html>
 

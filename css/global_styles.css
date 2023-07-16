@@ -20,7 +20,7 @@
     --DropDown: 50;
 }
 
-.header{
+.header {
     font-size: 25px;
     height: 12vh;
     width: 100%;
@@ -37,7 +37,7 @@
     z-index: var(--Header);
 }
 
-.logo{
+.logo {
     height: 50px;
     width: 50px;
 }
@@ -48,18 +48,18 @@
     font-weight: 500;
 }
 
-.log-out{
+.log-out {
     margin-left: 30px;
     color: var(--Pink);
 }
 
-.container{
+.container {
     width: 95%;
     height: fit-content;
     margin: 0 auto;
 }
 
-.first-coach-block{
+.first-coach-block {
     height: fit-content;
     margin-top: 20vh;
     margin-bottom: 10vh;
@@ -68,7 +68,7 @@
     justify-content: center;
 }
 
-.child-coach-block{
+.child-coach-block {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -77,17 +77,17 @@
     align-items: center;
 }
 
-h1{
+h1 {
     font-size: 35px;
     font-weight: bold;
 }
 
-button, input{
+button, input {
     width: fit-content;
     padding: 5px 20px;
     height: fit-content;
     margin: 5px;
-    background-color: var(--White) ;
+    background-color: var(--White);
     color: var(--DarkBlue);
     font-size: 15px;
     font-weight: 500;
@@ -95,11 +95,11 @@ button, input{
     border: 2px solid var(--LightBlue);
 }
 
-button:hover{
+button:hover {
     background-color: var(--LightBlue);
 }
 
-.drop-down-bar{
+.drop-down-bar {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -109,14 +109,14 @@ button:hover{
     margin: 20px 0;
 }
 
-.drop-down-flexbox{
+.drop-down-flexbox {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.drop-down-content{
+.drop-down-content {
     font-weight: 500;
     font-size: 15px;
     color: var(--DarkBlue);
@@ -133,7 +133,7 @@ button:hover{
     display: block;
 }
 
-.drop-down-list{
+.drop-down-list {
     position: relative;
     overflow: auto;
     z-index: var(--DropDown);
@@ -145,14 +145,14 @@ button:hover{
 
 }
 
-.drop-down-item{
+.drop-down-item {
     position: relative;
     display: block;
     margin: 1px 0;
     cursor: pointer;
 }
 
-.drop-down-item:hover{
+.drop-down-item:hover {
     color: var(--Pink);
 }
 
@@ -173,7 +173,7 @@ button:hover{
     display: flex;
 }
 
-.table-block{
+.table-block {
     width: 100%;
     height: 60vh;
     display: flex;
@@ -192,6 +192,32 @@ button:hover{
     align-items: center;
 }
 
+.student-progress-block {
+    height: 82vh;
+    margin-top: 15vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.child-student-block {
+    width: 40%;
+    margin: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+}
+
+.student-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+}
 input {
     margin: 3vh;
     border: 2px solid var(--DarkBlue);
