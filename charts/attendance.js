@@ -1,7 +1,3 @@
-// //Import data
-// import {disciplines_array} from '../data/disciplines.js';
-// import {group_array} from '../data/group.js';
-
 //Fetch default analytics data for all sports and all groups
 function fetchDefaultAnalytics() {
     return fetch('https://sport.innopolis.university/api/analytics/attendance')
@@ -11,19 +7,25 @@ function fetchDefaultAnalytics() {
 
 //Create default array for all sports and all groups with date + number
 var all_analytics_array = await fetchDefaultAnalytics();
-console.log(all_analytics_array);
-
-// function fetchAttendanceData(subject, start_date, end_date, time_unit) {
-//     return fetch('http://127.0.0.1:8000/attendance/' + subject + '?start_date='
-//         + start_date + '&end_date=' + end_date +'&time_unit=' + time_unit)
-//         .then(response => response.json())
-//         .then(data => data);
-// }
-
-// // Prepare the data
-// var data = await fetchAttendanceData('Math', '2021-01-01', '2021-12-31', 'month');
 
 //Create array with date + number as a dictionary
+
+function parseData(data) {
+    var parsedData = [];
+    for (let key in data) {
+        var dict = {};
+        dict["date"] = key;
+        dict["students"] = data[key];
+        parsedData.push(dict);
+    }
+    var parsedData2 = parsedData.map(item => ({
+        x: new Date(item["date"]),
+        y: item["students"],
+    }));
+    return parsedData2;
+}
+
+
 var default_array_with_dicts = [];
 for (let key in all_analytics_array) {
     var dict = {};
@@ -32,21 +34,11 @@ for (let key in all_analytics_array) {
     default_array_with_dicts.push(dict);
 }
 
-console.log(default_array_with_dicts);
 // Convert date strings to actual Date objects
-var parsedData = default_array_with_dicts.map(item => ({
+var parsedDataDefault = default_array_with_dicts.map(item => ({
     x: new Date(item["date"]),
     y: item["students"],
 }));
-
-// async function getParsedData(subject, start_date, end_date, time_unit) {
-//     var data = await fetchAttendanceData(subject, start_date, end_date, time_unit);
-//     var parsedData = data.map(item => ({
-//         x: new Date(item.date),
-//         y: item.students
-//     }));
-//     return parsedData;
-// }
 
 //Get HTML elements
 const ctx = document.getElementById('attendanceChart').getContext('2d');
@@ -57,15 +49,13 @@ const attendance_chart = new Chart(ctx, {
     data: {
         datasets: [{
             label: 'Number of Students',
-            data: parsedData,
+            data: parsedDataDefault,
             borderColor: '#008141',
             backgroundColor: '#00814122',
-            pointRadius: 4,
+            pointRadius: 3,
             pointBackgroundColor: '#008141',
             pointBorderColor: '#ffffff',
-            pointHoverRadius: 6,
-            pointHoverBackgroundColor: '#008141',
-            pointHoverBorderColor: '#ffffff',
+            pointHoverRadius: 5,
             lineTension: 0,
             borderWidth: 2
         }]
@@ -75,7 +65,7 @@ const attendance_chart = new Chart(ctx, {
              x: {
               type: 'time',
                  time: {
-                     unit: 'month'
+                     unit: 'week'
                  },
                   ticks: {
                       source: 'data' // Force x-axis ticks to be based on data points
@@ -91,5 +81,72 @@ const attendance_chart = new Chart(ctx, {
     }
 });
 
-//export {attendance_chart, getParsedData};
+//Import data
+import disciplines_array from '../data/disciplines.js';
+import group_array from '../data/group.js';
+
+//Export data
 export default attendance_chart;
+export {parseData};
+
+//All buttons functionality
+
+//Get li HTML elements
+
+var groupAll = document.getElementById("groupAll");
+var disciplineAll = document.getElementById("disciplinesAll");
+
+//Get HTML elements
+
+var groupButton = document.getElementById("groupButton");
+var disciplineButton = document.getElementById("disciplinesButton");
+
+groupAll.addEventListener('click', async function () {
+
+    if (disciplineButton.textContent === "All" || disciplineButton.textContent === "Disciplines") {
+        attendance_chart.data.datasets[0].data = parsedDataDefault;
+        attendance_chart.update();
+    }
+    else{
+        var disciplineName = disciplineButton.textContent;
+        var disciplineId = disciplines_array.find(x => x.name === disciplineName).id;
+
+        function fetchDataForAllGroupsSpecialSport() {
+        return fetch("https://sport.innopolis.university/api/analytics/attendance?sport_id=" + disciplineId)
+        .then(response => response.json())
+        .then(data => data);
+        }
+
+        var data = await fetchDataForAllGroupsSpecialSport();
+        var parsedData = parseData(data);
+
+        attendance_chart.data.datasets[0].data = parsedData;
+        attendance_chart.update();
+    }
+});
+
+disciplineAll.addEventListener('click', async function () {
+    if (groupButton.textContent === "All" || groupButton.textContent === "Group") {
+        attendance_chart.data.datasets[0].data = parsedDataDefault;
+        attendance_chart.update();
+    }
+    else{
+        var groupName = groupButton.textContent;
+        var groupId = group_array.find(x => x.name === groupName).id;
+
+        function fetchDataForAllSportsSpecialGroup() {
+            return fetch("https://sport.innopolis.university/api/analytics/attendance?sport_id=" + groupId)
+                .then(response => response.json())
+                .then(data => data);
+        }
+
+        var data = await fetchDataForAllSportsSpecialGroup();
+        var parsedData = parseData(data);
+
+        attendance_chart.data.datasets[0].data = parsedData;
+        attendance_chart.update();
+    }
+});
+
+
+
