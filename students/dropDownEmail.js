@@ -22,10 +22,6 @@ for (var i = 0; i < studentEmails.length; i++) {
     });
 }
 
-function scrollToBottom() {
-    window.scrollTo(0, document.body.scrollHeight);
-}
-
 // Updating email list after inserting letters
 input.addEventListener("keyup", function () {
     emailList.innerHTML = "";
@@ -44,8 +40,6 @@ input.addEventListener("keyup", function () {
             });
         }
     }
-
-    scrollToBottom()
 })
 ;
 
