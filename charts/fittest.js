@@ -2,8 +2,9 @@ const ctx = document.getElementById('fittestChart');
 
 //Prepare data
 var semesters = ['F22', 'S23', 'Summer 23'];
-var score = [40, 20, 35, 50, 30, 40, 40, 30, 10, 60, 40];
-var maxScore = [80, 70, 80, 60, 80, 50, 70, 60, 30, 80, 60];
+var crunches = [40, 20, 35];
+var push_ups = [80, 70, 80];
+var tilt = [60, 50, 20];
 
 //Create chart
 new Chart(ctx, {
@@ -12,19 +13,28 @@ new Chart(ctx, {
         labels: semesters,
         datasets: [
             {
-            label: 'Score',
-            data: score,
-            borderWidth: 1,
-            borderRadius: 20,
-            backgroundColor: '#008141',
-            barPercentage: 1,
-            categoryPercentage: 0.5
-        },
+                label: 'Crunches',
+                data: crunches,
+                borderWidth: 1,
+                borderRadius: 20,
+                backgroundColor: '#008141',
+                barPercentage: 1,
+                categoryPercentage: 0.5
+            },
             {
-                label: 'Maximum Score',
-                data: maxScore,
+                label: 'Push-ups',
+                data: push_ups,
                 borderRadius: 20,
                 backgroundColor: '#D8F5E8',
+                borderWidth: 0,
+                barPercentage: 1,
+                categoryPercentage: 0.5
+            },
+            {
+                label: 'Tilt',
+                data: tilt,
+                borderRadius: 20,
+                backgroundColor: '#b5f3d7',
                 borderWidth: 0,
                 barPercentage: 1,
                 categoryPercentage: 0.5
