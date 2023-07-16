@@ -126,6 +126,7 @@ button:hover{
     height: 20vh;
     width: fit-content;
     overflow: auto;
+    margin-bottom: 15px;
 }
 
 .drop-down-content.show {

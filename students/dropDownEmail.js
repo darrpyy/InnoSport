@@ -11,7 +11,6 @@ var input = document.getElementById("name");
 var emailList = document.getElementById("emailsList");
 var dropDownContentEmails = document.getElementById("dropDownContentEmails");
 
-
 for (var i = 0; i < studentEmails.length; i++) {
     var option = document.createElement('li');
     option.textContent = studentEmails[i];
@@ -44,6 +43,7 @@ input.addEventListener("keyup", function () {
 
 input.addEventListener('click', function () {
     dropDownContentEmails.classList.toggle('show');
+    dropDownContentEmails.scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
 document.addEventListener('click', function (event) {
